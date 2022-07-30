@@ -214,7 +214,7 @@ int JslConnectDevices()
 		// do we need to confirm vendor id if this is what we asked for?
 		if (cur_dev->vendor_id == DS4_VENDOR) {
 			// usb or bluetooth ds4:
-			printf("DS4\n");
+			//printf("DS4\n");
 			if (cur_dev->product_id == DS4_USB ||
 				cur_dev->product_id == DS4_USB_V2 ||
 				cur_dev->product_id == DS4_USB_DONGLE ||
@@ -233,7 +233,7 @@ int JslConnectDevices()
 	cur_dev = devs;
 	while (cur_dev) {
 		// brook usb ds4:
-		printf("Brook DS4\n");
+		//printf("Brook DS4\n");
 		if (cur_dev->product_id == BROOK_DS4_USB) {
 			JoyShock* jc = new JoyShock(cur_dev, GetUniqueHandle());
 			_joyshocks.emplace(jc->intHandle, jc);
@@ -250,7 +250,7 @@ int JslConnectDevices()
 		// do we need to confirm vendor id if this is what we asked for?
 		if (cur_dev->vendor_id == DS_VENDOR) {
 			// usb or bluetooth ds4:
-			printf("DS\n");
+			//printf("DS\n");
 			if (cur_dev->product_id == DS_USB) {
 				JoyShock* jc = new JoyShock(cur_dev, GetUniqueHandle());
 				_joyshocks.emplace(jc->intHandle, jc);
